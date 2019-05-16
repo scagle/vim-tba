@@ -70,6 +70,9 @@ syntax match tbaRegister "\c\<\(r\|R\)\x\>"
 " Constant
 syntax match tbaConstants "\c\<\x\+\>"
 
+" Addresses
+syntax match tbaAddress "^\c\<\x\+\>" 
+
 " Highlight groups
 highlight link tbaElementKeyword Function
 highlight link tbaComment        Comment
@@ -77,9 +80,10 @@ highlight link tbaTodoKeyword    Todo
 highlight link tbaRegister       Keyword
 highlight link tbaConstants      Constant
 highlight link tbaPreprocessor   PreProc
+highlight link tbaAddress        PreProc
 
 " Regions
 " syn region tbaElementRegion start='x' end='y'
 
-let b:current_sytax = "tba"
+let b:current_sytax = "lst"
 
